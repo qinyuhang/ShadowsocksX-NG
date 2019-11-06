@@ -10,7 +10,7 @@ import Foundation
 
 let SS_LOCAL_VERSION = "2.5.6.12.static"
 let PRIVOXY_VERSION = "3.0.26.static"
-let APP_SUPPORT_DIR = "/Library/Application Support/ShadowsocksX-NG/"
+let APP_SUPPORT_DIR = "/Library/Application Support/ShadowsocksX-NG-R/"
 let LAUNCH_AGENT_DIR = "/Library/LaunchAgents/"
 let LAUNCH_AGENT_CONF_SSLOCAL_NAME = "com.qiuyuzhou.shadowsocksX-NG.local.plist"
 let LAUNCH_AGENT_CONF_PRIVOXY_NAME = "com.qiuyuzhou.shadowsocksX-NG.http.plist"

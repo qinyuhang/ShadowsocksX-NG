@@ -9,7 +9,7 @@
 #import "ProxyConfHelper.h"
 #import "proxy_conf_helper_version.h"
 
-#define kShadowsocksHelper @"/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper"
+#define kShadowsocksHelper @"/Library/Application Support/ShadowsocksX-NG-R/proxy_conf_helper"
 
 @implementation ProxyConfHelper
 
