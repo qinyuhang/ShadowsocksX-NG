@@ -24,7 +24,7 @@ open class NetWorkMonitor: NSObject {
         statusItemView.showSpeed = true
     }
     
-    func startUpdateTimer() {
+    @objc func startUpdateTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateNetWorkData), userInfo: nil, repeats: true)
         if #available(OSX 10.12, *){
             
@@ -32,7 +32,7 @@ open class NetWorkMonitor: NSObject {
             alertView.messageText = "网速显示不支持 macOS 10.12 Sierra!"
             alertView.informativeText = "因为 macOS 10.12 Sierra ABI 不稳定，因此暂时移除网速功能"
             alertView.addButton(withTitle: "取消网速显示")
-            _ = DispatchQueue.main.sync(execute: { Void in
+            _ = DispatchQueue.main.sync(execute: {
                 alertView.runModal()
             })
             stop()
@@ -40,7 +40,7 @@ open class NetWorkMonitor: NSObject {
 //            CFRunLoopRun()
             
         } else {
-            RunLoop.current.add(timer!, forMode: RunLoopMode.commonModes)
+            RunLoop.current.add(timer!, forMode: RunLoop.Mode.common)
             RunLoop.current.run()
             print(RunLoop.current.getCFRunLoop())
         }
@@ -53,7 +53,7 @@ open class NetWorkMonitor: NSObject {
     }
 
     
-    func updateNetWorkData() {
+    @objc func updateNetWorkData() {
 
         if Thread.current.isCancelled{
             timer?.invalidate()
@@ -121,8 +121,8 @@ open class NetWorkMonitor: NSObject {
             var upRate: Float = 0.00
             var downRate: Float = 0.00
             for result in results {
-                downRate += Float((string as NSString).substring(with: result.rangeAt(2)))!
-                upRate += Float((string as NSString).substring(with: result.rangeAt(4)))!
+                downRate += Float((string as NSString).substring(with: result.range(at: 2)))!
+                upRate += Float((string as NSString).substring(with: result.range(at: 4)))!
             }
             statusItemView.setRateData(up: upRate, down: downRate)
         }

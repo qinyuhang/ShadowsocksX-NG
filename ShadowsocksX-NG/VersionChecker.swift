@@ -40,7 +40,7 @@ class VersionChecker: NSObject {
             alertView.addButton(withTitle: CancelBtn)
         }
         let action = alertView.runModal()
-        return action
+        return action.rawValue
     }
     func parserVersionString(strIn: String) -> Array<Int>{
         var strTmp = strIn.substring(to: (strIn.range(of: "-")?.lowerBound)!)

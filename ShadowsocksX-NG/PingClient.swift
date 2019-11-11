@@ -160,8 +160,8 @@ class PingServers:NSObject{
                 }
                 
                 
-                (NSApplication.shared().delegate as! AppDelegate).updateServersMenu()
-                (NSApplication.shared().delegate as! AppDelegate).updateRunningModeMenu()
+                (NSApplication.shared.delegate as! AppDelegate).updateServersMenu()
+                (NSApplication.shared.delegate as! AppDelegate).updateRunningModeMenu()
                 
                 // do the UI update HERE
                 if let min = result.min(by: {$0.1 < $1.1}){

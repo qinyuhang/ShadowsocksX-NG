@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88E9EC28B8B46C3631E6B242B50F4442"
+               BlueprintIdentifier = "3383968E74B5371B20BB519B170DC7FD"
                BuildableName = "Alamofire.framework"
                BlueprintName = "Alamofire"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C108414EE23FDB4033E3B303978D10C"
+               BlueprintIdentifier = "824711C42864F0F5FEB8D15B906A13EF"
                BuildableName = "libBRLOptionParser.a"
                BlueprintName = "BRLOptionParser"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76AB1BA247F8CB57FCB2BA6577D40FE6"
+               BlueprintIdentifier = "389D3BB6EBA1B359CA8A609105946629"
                BuildableName = "Pods_ShadowsocksX_NG.framework"
                BlueprintName = "Pods-ShadowsocksX-NG"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02486B4ED82798E52430FDA750E7D82D"
+               BlueprintIdentifier = "0126FD100EB78B7A7A3366B86DE2458E"
                BuildableName = "Pods_ShadowsocksX_NGTests.framework"
                BlueprintName = "Pods-ShadowsocksX-NGTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BAE42B81A719ACCA70D08EC06B64B500"
+               BlueprintIdentifier = "33685ED30F4415D02914816551C19831"
                BuildableName = "libPods-proxy_conf_helper.a"
                BlueprintName = "Pods-proxy_conf_helper"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">

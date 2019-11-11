@@ -152,7 +152,7 @@ class Subscribe: NSObject{
                         continue
                     }
                     if existResult {
-                        self.profileMgr.profiles.replaceSubrange(Range(existIndex..<existIndex + 1), with: [profile])
+                        self.profileMgr.profiles.replaceSubrange(existIndex..<existIndex + 1, with: [profile])
                         continue
                     }
                     self.profileMgr.profiles.append(profile)
@@ -160,8 +160,8 @@ class Subscribe: NSObject{
             }
             self.profileMgr.save()
             pushNotification(title: "成功更新订阅", subtitle: "", info: "更新来自\(subscribeFeed)的订阅")
-            (NSApplication.shared().delegate as! AppDelegate).updateServersMenu()
-            (NSApplication.shared().delegate as! AppDelegate).updateRunningModeMenu()
+            (NSApplication.shared.delegate as! AppDelegate).updateServersMenu()
+            (NSApplication.shared.delegate as! AppDelegate).updateRunningModeMenu()
         }
         
         if (!isActive){ return }

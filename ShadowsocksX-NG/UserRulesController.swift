@@ -22,7 +22,7 @@ class UserRulesController: NSWindowController {
         }
 
         let str = try? String(contentsOfFile: PACUserRuleFilePath, encoding: String.Encoding.utf8)
-        userRulesView.string = str
+        userRulesView.string = str ?? ""
     }
     
     @IBAction func didCancel(_ sender: AnyObject) {
@@ -30,24 +30,23 @@ class UserRulesController: NSWindowController {
     }
 
     @IBAction func didOK(_ sender: AnyObject) {
-        if let str = userRulesView.string {
-            do {
-                try str.data(using: String.Encoding.utf8)?.write(to: URL(fileURLWithPath: PACUserRuleFilePath), options: .atomic)
-
-                if GeneratePACFile() {
-                    // Popup a user notification
-                    let notification = NSUserNotification()
-                    notification.title = "PAC has been updated by User Rules.".localized
-                    NSUserNotificationCenter.default
-                        .deliver(notification)
-                } else {
-                    let notification = NSUserNotification()
-                    notification.title = "It's failed to update PAC by User Rules.".localized
-                    NSUserNotificationCenter.default
-                        .deliver(notification)
-                }
-            } catch {}
-        }
+        let str = userRulesView.string
+        do {
+            try str.data(using: String.Encoding.utf8)?.write(to: URL(fileURLWithPath: PACUserRuleFilePath), options: .atomic)
+            
+            if GeneratePACFile() {
+                // Popup a user notification
+                let notification = NSUserNotification()
+                notification.title = "PAC has been updated by User Rules.".localized
+                NSUserNotificationCenter.default
+                    .deliver(notification)
+            } else {
+                let notification = NSUserNotification()
+                notification.title = "It's failed to update PAC by User Rules.".localized
+                NSUserNotificationCenter.default
+                    .deliver(notification)
+            }
+        } catch {}
         window?.performClose(self)
     }
 }

@@ -35,16 +35,15 @@ What's not supported (but not really required from an embedded HTTP server):
 * HTTPS
 
 Requirements:
-* OS X 10.7 or later (x86_64)
+* macOS 10.7 or later (x86_64)
 * iOS 8.0 or later (armv7, armv7s or arm64)
-* ARC memory management only (if you need MRC support use GCDWebServer 3.1 and earlier)
+* tvOS 9.0 or later (arm64)
+* ARC memory management only (if you need MRC support use GCDWebServer 3.1 or earlier)
 
 Getting Started
 ===============
 
-Download or check out the [latest release](https://github.com/swisspol/GCDWebServer/releases) of GCDWebServer then add the entire "GCDWebServer" subfolder to your Xcode project. If you intend to use one of the extensions like GCDWebDAVServer or GCDWebUploader, add these subfolders as well.
-
-If you add the files directly then (1) link to `libz` (via Target > Build Phases > Link Binary With Libraries) and (2) add `$(SDKROOT)/usr/include/libxml2` to your header search paths (via Target > Build Settings > HEADER_SEARCH_PATHS).
+Download or check out the [latest release](https://github.com/swisspol/GCDWebServer/releases) of GCDWebServer then add the entire "GCDWebServer" subfolder to your Xcode project. If you intend to use one of the extensions like GCDWebDAVServer or GCDWebUploader, add these subfolders as well. Finally link to `libz` (via Target > Build Phases > Link Binary With Libraries) and add `$(SDKROOT)/usr/include/libxml2` to your header search paths (via Target > Build Settings > HEADER_SEARCH_PATHS).
 
 Alternatively, you can install GCDWebServer using [CocoaPods](http://cocoapods.org/) by simply adding this line to your Podfile:
 ```
@@ -350,8 +349,8 @@ GCDWebServer & Background Mode for iOS Apps
 When doing networking operations in iOS apps, you must handle carefully [what happens when iOS puts the app in the background](https://developer.apple.com/library/ios/technotes/tn2277/_index.html). Typically you must stop any network servers while the app is in the background and restart them when the app comes back to the foreground. This can become quite complex considering servers might have ongoing connections when they need to be stopped.
 
 Fortunately, GCDWebServer does all of this automatically for you:
-- GCDWebServer begins a [background task](https://developer.apple.com/library/ios/documentation/iphone/conceptual/iphoneosprogrammingguide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html) whenever the first HTTP connection is opened and ends it only when the last one is closed. This prevents iOS from suspending the app after it goes in the background, which would immediately kill HTTP connections to the client.
- - While the app is in the background, as long as new HTTP connections keep being initiated, the background task will continue to exist and iOS will not suspend the app (unless under sudden and unexpected memory pressure).
+- GCDWebServer begins a [background task](https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html) whenever the first HTTP connection is opened and ends it only when the last one is closed. This prevents iOS from suspending the app after it goes in the background, which would immediately kill HTTP connections to the client.
+ - While the app is in the background, as long as new HTTP connections keep being initiated, the background task will continue to exist and iOS will not suspend the app **for up to 10 minutes** (unless under sudden and unexpected memory pressure).
  - If the app is still in the background when the last HTTP connection is closed, GCDWebServer will suspend itself and stop accepting new connections as if you had called ```-stop``` (this behavior can be disabled with the ```GCDWebServerOption_AutomaticallySuspendInBackground``` option).
 - If the app goes in the background while no HTTP connections are opened, GCDWebServer will immediately suspend itself and stop accepting new connections as if you had called ```-stop``` (this behavior can be disabled with the ```GCDWebServerOption_AutomaticallySuspendInBackground``` option).
 - If the app comes back to the foreground and GCDWebServer had been suspended, it will automatically resume itself and start accepting again new HTTP connections as if you had called ```-start```.

@@ -70,9 +70,9 @@ class ProxyPreferencesController: NSWindowController, NSTableViewDataSource, NST
         
         let key = (networkServices[row] as AnyObject)["key"] as! String
         if selectedNetworkServices.contains(key) {
-            cell.state = 1
+            cell.state = NSControl.StateValue(rawValue: 1)
         } else {
-            cell.state = 0
+            cell.state = NSControl.StateValue(rawValue: 0)
         }
         let userDefinedName = (networkServices[row] as AnyObject)["userDefinedName"] as! String
         cell.title = userDefinedName
