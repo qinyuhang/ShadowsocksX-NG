@@ -85,8 +85,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-               BuildableName = "ShadowsocksX-NG.app"
-               BlueprintName = "ShadowsocksX-NG"
+               BuildableName = "ShadowsocksX-NG-R.app"
+               BlueprintName = "ShadowsocksX-NG-R"
                ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -113,8 +113,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -136,8 +136,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -155,8 +155,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
