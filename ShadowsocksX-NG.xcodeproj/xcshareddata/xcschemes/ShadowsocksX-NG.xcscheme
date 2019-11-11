@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3CB2B8006B2B1ACAF9ADCA1DC82E2290"
+               BlueprintIdentifier = "0C108414EE23FDB4033E3B303978D10C"
                BuildableName = "libBRLOptionParser.a"
                BlueprintName = "BRLOptionParser"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -56,7 +56,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "339CC546E4A1696296EFEDC2FA79ADE0"
+               BlueprintIdentifier = "02486B4ED82798E52430FDA750E7D82D"
                BuildableName = "Pods_ShadowsocksX_NGTests.framework"
                BlueprintName = "Pods-ShadowsocksX-NGTests"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -70,7 +70,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "05800FAF969AA3CD7F8AEB1C36988B53"
+               BlueprintIdentifier = "BAE42B81A719ACCA70D08EC06B64B500"
                BuildableName = "libPods-proxy_conf_helper.a"
                BlueprintName = "Pods-proxy_conf_helper"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -85,8 +85,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-               BuildableName = "ShadowsocksX-NG.app"
-               BlueprintName = "ShadowsocksX-NG"
+               BuildableName = "ShadowsocksX-NG-R.app"
+               BlueprintName = "ShadowsocksX-NG-R"
                ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -113,8 +113,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -136,8 +136,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -155,8 +155,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B0BFFE41D0460A70040E62B"
-            BuildableName = "ShadowsocksX-NG.app"
-            BlueprintName = "ShadowsocksX-NG"
+            BuildableName = "ShadowsocksX-NG-R.app"
+            BlueprintName = "ShadowsocksX-NG-R"
             ReferencedContainer = "container:ShadowsocksX-NG.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
