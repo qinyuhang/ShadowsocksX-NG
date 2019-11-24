@@ -253,7 +253,7 @@ static NSDictionary<NSString*, id>* ParseSSRURL(NSURL* url) {
         return @{@"ServerHost":ip,
                  @"ServerPort": @([port integerValue]),
                  @"Method": encryption,
-                 @"Password": password,
+                 @"Password": password ?: @"",
                  @"ssrObfs":ssrObfs,
                  @"ssrObfsParam":ssrObfsParam,
                  @"ssrProtocol":ssrProtocol,
