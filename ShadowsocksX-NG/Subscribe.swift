@@ -11,11 +11,11 @@ import Alamofire
 
 class Subscribe: NSObject{
     
-    var subscribeFeed = ""
+    @objc var subscribeFeed = ""
     var isActive = true
-    var maxCount = 0 // -1 is not limited
-    var groupName = ""
-    var token = ""
+    @objc var maxCount = 0 // -1 is not limited
+    @objc var groupName = ""
+    @objc var token = ""
     var cache = ""
     
     var profileMgr: ServerProfileManager!
