@@ -35,7 +35,7 @@ open class StatusItemView: NSControl {
         
         darkMode = SystemThemeChangeHelper.isCurrentDark()
         
-        SystemThemeChangeHelper.addRespond(target: self, selector: #selector(changeMode))
+        SystemThemeChangeHelper.addRespond(target: self, selector: #selector(_changeMode))
     }
     
     required public init?(coder: NSCoder) {
@@ -105,7 +105,7 @@ open class StatusItemView: NSControl {
         }
     }
     
-    @objc func changeMode() {
+    @objc func _changeMode() {
         darkMode = SystemThemeChangeHelper.isCurrentDark()
         setNeedsDisplay()
     }

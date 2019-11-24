@@ -13,17 +13,17 @@ import Cocoa
 class ServerProfile: NSObject {
     var uuid: String
     
-    var serverHost: String = ""
-    var serverPort: uint16 = 8379
-    var method:String = "aes-128-cfb"
-    var password:String = ""
-    var remark:String = ""
+    @objc var serverHost: String = ""
+    @objc var serverPort: uint16 = 8379
+    @objc var method:String = "aes-128-cfb"
+    @objc var password:String = ""
+    @objc var remark:String = ""
     
-    var ssrProtocol:String = "origin"
-    var ssrProtocolParam:String = ""
-    var ssrObfs:String = "plain"
-    var ssrObfsParam:String = ""
-    var ssrGroup: String = ""
+    @objc var ssrProtocol:String = "origin"
+    @objc var ssrProtocolParam:String = ""
+    @objc var ssrObfs:String = "plain"
+    @objc var ssrObfsParam:String = ""
+    @objc var ssrGroup: String = ""
     
     var latency:String?
     
